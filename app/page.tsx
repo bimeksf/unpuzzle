@@ -48,25 +48,25 @@ export default function Home() {
         </svg>
 
         <div className="absolute top-[20%] left-[45%] w-12 h-12 bg-white p-2 shadow-md rounded">
-          <Image src="/burger.jpg" alt="Discord" fill className="object-contain" />
+          <Image src="/Discord.svg" alt="Discord" fill className="object-contain" />
         </div>
         <div className="absolute top-[40%] left-[25%] w-12 h-12 bg-white p-2 shadow-md rounded">
-          <Image src="/curry.jpg" alt="Spotify" fill className="object-contain" />
+          <Image src="/spotify.svg" alt="Spotify" fill className="object-contain" />
         </div>
         <div className="absolute top-[60%] left-[50%] w-12 h-12 bg-white p-2 shadow-md rounded">
-          <Image src="/dumplings.jpg" alt="UPS" fill className="object-contain" />
+          <Image src="/ups.svg" alt="UPS" fill className="object-contain" />
         </div>
         <div className="absolute top-[30%] left-[70%] w-12 h-12 bg-white p-2 shadow-md rounded">
-          <Image src="/burger.jpg" alt="Shell" fill className="object-contain" />
+          <Image src="/Shell.svg" alt="Shell" fill className="object-contain" />
         </div>
         <div className="absolute top-[50%] left-[60%] w-12 h-12 bg-white p-2 shadow-md rounded">
-          <Image src="/curry.jpg" alt="Apple" fill className="object-contain" />
+          <Image src="/apple.svg" alt="Apple" fill className="object-contain" />
         </div>
         <div className="absolute top-[70%] left-[75%] w-12 h-12 bg-white p-2 shadow-md rounded">
-          <Image src="/burger.jpg" alt="YouTube" fill className="object-contain" />
+          <Image src="/YouTube.svg" alt="YouTube" fill className="object-contain" />
         </div>
         <div className="absolute top-[50%] left-[85%] w-12 h-12 bg-white p-2 shadow-md rounded">
-          <Image src="/dumplings.jpg" alt="Google" fill className="object-contain" />
+          <Image src="/chrome.svg" alt="Google" fill className="object-contain" />
         </div>
       </div>
     </div>

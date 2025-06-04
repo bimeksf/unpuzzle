@@ -1,8 +1,8 @@
 export default function Terms() {
   return (
-    <section className="min-h-screen flex flex-col">
+    <section className="grid grid-cols-1 md:grid-cols-2 min-h-screen min-w-screen font-sans overflow-hidden">
       
-      <div className="w-full">
+      <div className="w-full z-10">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <h1 className="text-[3rem] font-medium text-[#39383F] pb-5 leading-none">
             Terms & Conditions
@@ -16,8 +16,8 @@ export default function Terms() {
       </div>
 
      
-      <div className="bg-[#F4F4F4] w-full">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 text-[#333]">
+<div className=" absolute top-0 right-0 w-full md:w-1/2 h-screen bg-[#F4F4F4] overflow-y-auto hidden sm:block  scrollbar-thin scrollbar-thumb-[#39383F] scrollbar-track-[#e7e7e7]  ">        
+<div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 text-[#333]">
           <p className="pb-6">
             Below we describe how exactly and to what extent we process your personal data, as well as your own rights regarding the issue.
           </p>
@@ -35,7 +35,7 @@ export default function Terms() {
               body: 'We gather personal data directly from you, either when you purchase a ticket, or when you sign up and create a profile at handson.cz.'
             },
             {
-                             id:"other-documents",
+                             id:"personal-data",
               title: 'What kind of personal data do we collect?',
               body: 'Based on a ticket purchase: Your name, surname, e-mail, phone number, occasionally your address if necessary for the ticket to be delivered; Other data requested by the promoter which are necessary for the purchase to go through and which are marked by the (i) sign on the purchase form. If you sign up and create a profile: Your name, surname, and e-mail; Your profile photo, if you register through Facebook or if you upload it by yourself; The same data that are collected when you purchase a ticket, if you purchase it while logged in.'
             },

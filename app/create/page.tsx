@@ -81,14 +81,14 @@ export default function CreateAccount() {
         {/* Orbit lines (simple placeholder SVG) */}
      <svg width="100%" height="100%" className="absolute inset-0 w-full h-full">
           {[100,200,300, 400, 500, 600].map((r, i) => {
-            // Výpočet bodů pro trojúhelník se základnou vlevo
-            const centerX = 100; // Střed X
-            const centerY = 400; // Střed Y
-            const baseHeight = r * 1.8; // Výška základny (zúžení pro trojúhelník)
+          
+            const centerX = 100; 
+            const centerY = 400; 
+            const baseHeight = r * 1.8; 
             const points = [
-              [centerX + r, centerY], // Vrchol základny vlevo
-              [centerX - r, centerY - baseHeight], // Horní pravý bod
-              [centerX - r, centerY + baseHeight], // Spodní pravý bod
+              [centerX + r, centerY], 
+              [centerX - r, centerY - baseHeight], 
+              [centerX - r, centerY + baseHeight], 
             ]
               .map(point => point.join(","))
               .join(" ");
