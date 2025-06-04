@@ -2,9 +2,9 @@ import Link from "next/link";
 
 export default function Login() {
   return (
-    <section className="min-h-screen flex items-center justify-center">
-      <div className="flex flex-col mx-4 justify-center max-w-lg w-full">
-        <div className="text-left pb-24">
+    <section className="grid grid-cols-1 md:grid-cols-2 min-h-screen min-w-screen font-sans overflow-hidden">
+      <div className="flex flex-col mx-12 justify-center max-w-lg w-full">
+        <div className="text-left pb-20">
           <h1 className="text-[3rem] font-medium text-[#39383F] pb-5 leading-none">
             Log in
           </h1>
@@ -13,7 +13,7 @@ export default function Login() {
           </p>
         </div>
 
-        <form className="text-[#39383F]">
+        <form className="text-[#39383F] pb-20 mb-20">
           <div className="flex flex-col gap-4">
             <label htmlFor="email" className="sr-only">Email</label>
             <input
@@ -48,6 +48,32 @@ export default function Login() {
           </button>
         </form>
       </div>
+
+ {/* RIGHT SIDE */}
+ <div className="absolute top-0 right-0 w-1/2 min-h-screen bg-[#F4F4F4] overflow-hidden hidden  sm:flex flex-col items-center justify-center">
+        {/* Orbit lines (simple placeholder SVG) */}
+        <svg
+          className="absolute inset-0 w-full h-full"
+          viewBox="0 0 600 600"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          {[80, 140, 200, 260].map((r, i) => (
+            <circle
+              key={i}
+              cx="300"
+              cy="300"
+              r={r}
+              stroke="#DADADA"
+              strokeWidth="1"
+            />
+          ))}
+        </svg>
+
+                <h1 className="text-5xl text-[#39383F] m-auto z-20">Boost profitability</h1>        
+      </div>
+
     </section>
+
   );
 }
