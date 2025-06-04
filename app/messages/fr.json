@@ -1,0 +1,8 @@
+{
+  "Home": {
+    "title": "Bienvenue chez Unpuzzle",
+    "description": "Créez et gérez le réseau de partage des connaissances de votre entreprise, permettant aux employés de se connecter rapidement avec ceux qui ont résolu ou résolvent des défis similaires."  }
+   ,  "Button": {
+    "login": "Se connecter"
+  }
+}

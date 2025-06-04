@@ -9,9 +9,12 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "i18next": "^25.2.1",
     "next": "15.3.3",
+    "next-intl": "^4.1.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
+    "react-i18next": "^15.5.2",
     "react-icons": "^5.5.0",
     "tailwind-scrollbar": "^4.0.2"
   },

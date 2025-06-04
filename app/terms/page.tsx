@@ -4,8 +4,8 @@ export default function Terms() {
       
       <div className="w-full z-10">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-          <h1 className="text-[3rem] font-medium text-[#39383F] pb-5 leading-none">
-            Terms & Conditions
+          <h1 className="text-[3.75rem] font-medium text-[#39383F] pb-5 leading-none">
+            Terms <br /> & Conditions
           </h1>
           <ul className="p-0">
             <li className="hover:bg-[#F4F4F4] py-2 px-2 cursor-pointer"><a href="#privacy-policy">Privacy Policy</a></li>
@@ -16,7 +16,7 @@ export default function Terms() {
       </div>
 
      
-<div className=" absolute top-0 right-0 w-full md:w-1/2 h-screen bg-[#F4F4F4] overflow-y-auto hidden sm:block  scrollbar-thin scrollbar-thumb-[#39383F] scrollbar-track-[#e7e7e7]  ">        
+<div className=" min-h-screen min-w-full md:w-1/2 h-screen bg-[#F4F4F4] overflow-y-auto hidden sm:block  scrollbar-thin scrollbar-thumb-[#39383F] scrollbar-track-[#e7e7e7]  ">        
 <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 text-[#333]">
           <p className="pb-6">
             Below we describe how exactly and to what extent we process your personal data, as well as your own rights regarding the issue.
