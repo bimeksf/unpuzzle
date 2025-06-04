@@ -8,7 +8,7 @@ export default function MainFooter(){
        
        <p>support@unpuzzle.com</p>
 
-        <Link href={"/terms"}>Terms & Conditions</Link>
+        <Link href={"/terms"} className="hover:underline">Terms & Conditions</Link>
 
     </div>
     

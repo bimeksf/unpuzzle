@@ -22,11 +22,11 @@ export default function MainHeader (){
 
                         <div onClick={handleClick} className="bg-[#39383F] text-white font-medium  p-2">en</div>
                         {open && <ul className="absolute right-14 bg-white shadow-2xl text-[#39383F] p-2 z-20">
-                                <li className="p-2 hover:bg-[#d1d1d1] cursor-pointer">English</li>
-                                <li className="p-2 hover:bg-[#d1d1d1] cursor-pointer">Čeština</li>
-                                <li className="p-2 hover:bg-[#d1d1d1] cursor-pointer">Français</li>
-                                <li className="p-2 hover:bg-[#d1d1d1] cursor-pointer">Deutsch</li>
-                                <li className="p-2 hover:bg-[#d1d1d1] cursor-pointer">Nederland</li>
+                                <li className="p-2 hover:bg-[#e7e7e7] cursor-pointer">English</li>
+                                <li className="p-2 hover:bg-[#e7e7e7] cursor-pointer">Čeština</li>
+                                <li className="p-2 hover:bg-[#e7e7e7] cursor-pointer">Français</li>
+                                <li className="p-2 hover:bg-[#e7e7e7] cursor-pointer">Deutsch</li>
+                                <li className="p-2 hover:bg-[#e7e7e7] cursor-pointer">Nederland</li>
                         </ul>}
 
 
