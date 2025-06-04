@@ -18,7 +18,7 @@ export default function MainHeader (){
 
     return <>
 
-        <header className="mx-12 py-12">
+        <header className="mx-4  sm:mx-12 py-12">
                 <nav className="flex justify-between ">
                          
             <Link href={"/"} className="text-[#39383F] text-[1.375rem] font-medium relative">
