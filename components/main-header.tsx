@@ -2,12 +2,10 @@
 
 import Link from "next/link";
 import { useState } from "react";
-
 export default function MainHeader() {
   const [open, setOpen] = useState(false);
   const [active, setActive] = useState(false);
   const [selectedLanguage, setSelectedLanguage] = useState("en");
-
 
 
 
@@ -23,7 +21,6 @@ export default function MainHeader() {
 
    
   }
-
 
 
   const languages = [
@@ -45,6 +42,9 @@ export default function MainHeader() {
 
     <>
       <header className="fixed top-0 left-0 w-full z-50 px-4 sm:px-12 py-4">
+
+        
+  
         <nav className="flex justify-between items-center">
           <Link
             href={"/"}

@@ -2,8 +2,46 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
+import { createUserWithEmailAndPassword, sendEmailVerification } from "firebase/auth";
+import { auth } from "@/lib/firebase";
+import { useRouter } from "next/navigation";
+import { useState } from "react";
 
 export default function CreateAccount() {
+  const router = useRouter();
+  const [error, setError] = useState("");
+  const [loading, setLoading] = useState(false);
+
+  const handleCreateAccount = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setError("");
+    setLoading(true);
+
+    const email = (e.currentTarget.email as HTMLInputElement).value;
+    const password = (e.currentTarget.password as HTMLInputElement).value;
+    const confirm = (e.currentTarget.passwordConfirm as HTMLInputElement).value;
+
+    if (password !== confirm) {
+      setLoading(false);
+      setError("Passwords do not match");
+      return;
+    }
+
+    try {
+      const userCredential = await createUserWithEmailAndPassword(auth, email, password);
+      await sendEmailVerification(userCredential.user);
+      router.push("/dashboard");
+    } catch (err) {
+      if (err instanceof Error) {
+        setError(err.message);
+      } else {
+        setError("Unexpected error occurred.");
+      }
+    } finally {
+      setLoading(false);
+    }
+  };
+
   return (
     <section className="grid grid-cols-1 md:grid-cols-2 min-h-screen min-w-screen font-sans overflow-hidden bg-white">
       {/* LEFT SIDE */}
@@ -22,7 +60,9 @@ export default function CreateAccount() {
           </p>
         </div>
 
-        <form className="text-[#39383F] pb-20 mb-20 w-[90%] sm:px-0">
+        <form onSubmit={handleCreateAccount} className="text-[#39383F] pb-20 mb-20 w-[90%] sm:px-0">
+          {error && <div className="text-red-500 text-sm mb-4">{error}</div>}
+
           <div className="flex flex-col gap-4">
             <label htmlFor="email" className="sr-only">Email</label>
             <input
@@ -32,6 +72,7 @@ export default function CreateAccount() {
               placeholder="E-mail address"
               className="border-b-2 border-black focus:border-b-4 pb-3 outline-0"
               aria-label="Email"
+              required
             />
 
             <label htmlFor="password" className="sr-only">Password</label>
@@ -42,6 +83,8 @@ export default function CreateAccount() {
               placeholder="Password"
               className="border-b-2 border-black focus:border-b-4 pb-3 outline-0"
               aria-label="Password"
+              required
+              minLength={6}
             />
 
             <input
@@ -51,6 +94,8 @@ export default function CreateAccount() {
               placeholder="Password Confirm"
               className="border-b-2 border-black focus:border-b-4 pb-3 outline-0"
               aria-label="Password Confirm"
+              required
+              minLength={6}
             />
 
             <Link
@@ -66,9 +111,10 @@ export default function CreateAccount() {
               whileHover={{ scale: 1.03 }}
               whileTap={{ scale: 0.97 }}
               type="submit"
-              className="bg-[#39383F] text-white py-4 px-6 font-medium mt-6"
+              disabled={loading}
+              className={`bg-[#39383F] text-white py-4 px-6 font-medium mt-6 transition ${loading ? "opacity-50 cursor-not-allowed" : ""}`}
             >
-              Create an Account
+              {loading ? "Creating Account..." : "Create an Account"}
             </motion.button>
           </div>
         </form>
