@@ -2,7 +2,7 @@ export default function Terms() {
   return (
     <section className="grid grid-cols-1 md:grid-cols-2 min-h-screen min-w-screen font-sans overflow-hidden">
       
-      <div className="w-full z-10">
+      <div className="w-full z-10 py-12">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <h1 className="text-[3.75rem] font-medium text-[#39383F] pb-5 leading-none">
             Terms <br /> & Conditions

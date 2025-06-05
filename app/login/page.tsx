@@ -2,8 +2,8 @@ import Link from "next/link";
 
 export default function Login() {
   return (
-    <section className="grid grid-cols-1 md:grid-cols-2 min-h-screen min-w-screen font-sans overflow-hidden ">
-      <div className="flex flex-col mx-4  sm:mx-12 justify-center max-w-lg w-full">
+    <section className="grid grid-cols-1 md:grid-cols-2 min-h-screen min-w-screen font-sans overflow-hidden bg-white ">
+      <div className="flex flex-col mx-4  sm:mx-12 justify-center max-w-lg w-full py-12">
         <div className="text-left pb-20">
           <h1 className="text-[3rem] font-medium text-[#39383F] pb-5 leading-none">
             Log in

@@ -1,6 +1,11 @@
 "use client";
 import Link from "next/link";
 import Image from "next/image";
+
+
+
+
+
 export default function HeroLayout() {
   return (
     <div className="flex flex-col md:flex-row h-screen w-full bg-white">
@@ -27,7 +32,7 @@ export default function HeroLayout() {
       </div>
 
       {/* right  */}
-      <div className="w-full md:w-1/2 bg-[#F8F8F8] relative flex items-center justify-center px-4">
+      <div className="w-full md:w-1/2 bg-[#F8F8F8] relative sm:flex items-center justify-center px-4 hidden">
          {/* Orbit lines (simple placeholder SVG) */}
                 <svg
                   className="absolute inset-0 w-full h-full"
@@ -69,6 +74,7 @@ export default function HeroLayout() {
                   <Image src="/chrome.svg" alt="Google" fill className="object-contain" />
                 </div>
               </div>
+              
       </div>
    
   );

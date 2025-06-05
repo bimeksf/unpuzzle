@@ -2,11 +2,16 @@
 
 import Link from "next/link";
 import { useState } from "react";
+import { useRouter } from "next/navigation"; 
 
 export default function MainHeader() {
   const [open, setOpen] = useState(false);
   const [active, setActive] = useState(false);
   const [selectedLanguage, setSelectedLanguage] = useState("en");
+
+
+
+const router = useRouter();
 
 
   function handleClick() {
@@ -17,6 +22,7 @@ export default function MainHeader() {
     setOpen((prev) => !prev);
     setSelectedLanguage(code) 
  setActive((prev) => !prev);
+ router.push(`/${code}`)
 
    
   }
