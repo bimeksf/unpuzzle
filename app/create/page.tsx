@@ -3,8 +3,8 @@ import Link from "next/link";
 export default function CreateAccount() {
   return (
     <section className="grid grid-cols-1 md:grid-cols-2 min-h-screen min-w-screen font-sans overflow-hidden ">
-      <div className="flex flex-col mx-4  sm:mx-12 justify-center max-w-lg w-full">
-        <div className="text-left pb-20">
+      <div className="flex flex-col mx-4  sm:mx-12 justify-center max-w-lg w-full   ">
+        <div className="text-left pb-20 py-12">
           <h1 className="text-[3rem] font-medium text-[#39383F] pb-5 leading-none">
             Create an Account
           </h1>
@@ -48,8 +48,8 @@ export default function CreateAccount() {
 
 
          
-              <Link href="/forgot-password" className="text-right text-sm opacity-50 hover:underline">
-                Forgotten password?
+              <Link href="/login" className="text-right text-sm opacity-50 hover:underline">
+                Already have an Account ?
               </Link>
             </div>
 
@@ -65,10 +65,7 @@ export default function CreateAccount() {
             >
             Create an Account
           </button>
-             <Link href="/login"  className="border-2 border-[#39383F] text-[#39383F] py-4 px-6 font-medium mt-6 text-center hover:bg-[#39383F] hover:text-white transition">
-             
-                    Login
-              </Link>
+         
       
 
               </div>

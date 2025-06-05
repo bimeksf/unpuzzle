@@ -2,7 +2,6 @@
 
 import Link from "next/link";
 import { useState } from "react";
-import { useRouter } from "next/navigation"; 
 
 export default function MainHeader() {
   const [open, setOpen] = useState(false);
@@ -11,7 +10,6 @@ export default function MainHeader() {
 
 
 
-const router = useRouter();
 
 
   function handleClick() {
@@ -22,7 +20,6 @@ const router = useRouter();
     setOpen((prev) => !prev);
     setSelectedLanguage(code) 
  setActive((prev) => !prev);
- router.push(`/${code}`)
 
    
   }
@@ -31,7 +28,7 @@ const router = useRouter();
 
   const languages = [
     { code: "en", label: "English" },
-    { code: "cz", label: "Čeština" },
+    { code: "cs", label: "Čeština" },
     { code: "fr", label: "Français" },
     { code: "de", label: "Deutsch" },
     { code: "nl", label: "Nederland" },
@@ -73,7 +70,9 @@ const router = useRouter();
               {languages.map(lang=><li 
               onClick={()=>handleLanguage(lang.code)}
               
-              key={lang.code} className="p-2 hover:bg-[#e7e7e7] cursor-pointer">{lang.label}</li>)}
+              key={lang.code} className="p-2 hover:bg-[#e7e7e7] cursor-pointer"> 
+          {lang.label}
+        </li>)}
             </ul>
           )}
         </nav>
