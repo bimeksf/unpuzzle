@@ -7,7 +7,7 @@ import OrbitWrapper from "@/components/OrbitingLogo";
 
 export default function HeroLayout() {
   return (
-    <div className="flex flex-col md:flex-row h-screen w-full bg-white">
+    <div className="flex flex-col md:flex-row h-screen w-full bg-white overflow-hidden">
       <div className="w-full md:w-1/2 flex flex-col justify-between px-6 md:px-12 py-12">
         <motion.div 
       

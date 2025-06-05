@@ -80,7 +80,7 @@ export default function MainHeader() {
  
       </header>
        {/* Bottom bar (only on md and up) */}
-        <div className="hidden md:flex gap-6 items-center text-sm text-[#39383F] py-4 fixed bottom-0 left-0 px-4 sm:px-12">
+        <div className="hidden sm:flex gap-6 items-center text-sm text-[#39383F] py-4 fixed bottom-0 left-0 px-4 sm:px-12 sm:z-100">
           <span
             onClick={handleClick}
             className={`border px-2 py-1 cursor-pointer ${
