@@ -60,7 +60,7 @@ export default function CreateAccount() {
           </p>
         </div>
 
-        <form onSubmit={handleCreateAccount} className="text-[#39383F] pb-20 mb-20 w-[90%] sm:px-0">
+        <form onSubmit={handleCreateAccount} className="text-[#39383F] pb-10 mb-20 w-[90%] sm:px-0">
           {error && <div className="text-red-500 text-sm mb-4">{error}</div>}
 
           <div className="flex flex-col gap-4">

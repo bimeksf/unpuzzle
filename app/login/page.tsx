@@ -63,14 +63,14 @@ export default function Login() {
         transition={{ duration: 0.7 }}
         className="flex flex-col mx-4 sm:mx-12 justify-center max-w-lg w-full py-12"
       >
-        <div className="text-left pb-10">
+               <div className="text-left pb-20">
           <h1 className="text-4xl font-medium text-[#39383F] pb-3">Log in</h1>
           <p className="text-[#39383F] opacity-75">To get inspired and tackle challenges with joy.</p>
         </div>
 
         {/* FORM */}
-        <form className="text-[#39383F] mb-10 w-full" onSubmit={handleLogin}>
-          {error && <p className="text-red-500 text-sm mb-2">{error}</p>}
+        <form className="text-[#39383F] pb-10  w-[90%] sm:px-0" onSubmit={handleLogin}>
+          {error && <div className="text-red-500 text-sm mb-4">{error}</div>}
 
           <div className="flex flex-col gap-4">
             <label htmlFor="email" className="sr-only">Email</label>
@@ -120,7 +120,7 @@ export default function Login() {
         </form>
 
         {/* Google Login */}
-        <div className="mt-6 text-center">
+        <div className=" text-center w-[90%]">
           <p className="mb-4 text-sm text-gray-600">Or sign in with</p>
           <button
             onClick={handleGoogleLogin}
